@@ -1,0 +1,1251 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dra. Priscila Zocal Buss | Medicina Regenerativa e Saúde da Mulher</title>
+  <meta name="description" content="Medicina regenerativa, estética médica avançada, lipoenxertia facial, cirurgia íntima e saúde da mulher com a Dra. Priscila Zocal Buss." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #070605;
+      --cream-dark: #221916;
+      --ink: #F5EEE6;
+      --ink-muted: #BBAEA3;
+      --rose: #D4A25E;
+      --rose-light: #C8944F;
+      --rose-pale: #21140F;
+      --linen: #3A302A;
+      --white: #FAFAF8;
+      --panel: #11100E;
+      --black: #050403;
+      --serif: 'Poppins', system-ui, sans-serif;
+      --sans: 'Poppins', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── TYPOGRAPHY ── */
+    .eyebrow {
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--rose);
+    }
+
+    h1, h2, h3 {
+      font-family: var(--serif);
+      font-weight: 300;
+      line-height: 1.15;
+    }
+
+    h1 { font-size: clamp(3rem, 7vw, 5.5rem); }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); }
+    h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
+
+    p { color: var(--ink-muted); line-height: 1.8; font-weight: 300; }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 4rem;
+      transition: background 0.4s, backdrop-filter 0.4s;
+    }
+
+    .site-header.scrolled {
+      background: rgba(7, 6, 5, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--cream-dark);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid var(--rose-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .brand-text {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    .main-nav a {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      transition: color 0.2s;
+    }
+
+    .main-nav a:hover { color: var(--ink); }
+
+    .nav-cta {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--black);
+      background: var(--rose-light);
+      padding: 0.7rem 1.5rem;
+      transition: background 0.2s;
+    }
+
+    .nav-cta:hover { background: var(--rose); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100svh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem 3rem 5rem 4rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      filter: saturate(0.85);
+    }
+
+    .hero-right::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, var(--cream) 0%, rgba(7,6,5,0.35) 34%, transparent 58%);
+    }
+
+    .hero-eyebrow {
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(3.5rem, 6vw, 5.5rem);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: 0;
+      margin-bottom: 2rem;
+    }
+
+    .hero-title em {
+      font-style: normal;
+      color: var(--rose);
+    }
+
+    .hero-copy {
+      font-size: 1rem;
+      max-width: 36ch;
+      margin-bottom: 3rem;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hero-scroll span {
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--rose-light);
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 3rem;
+      background: var(--rose-light);
+      animation: scrollAnim 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollAnim {
+      0%, 100% { transform: scaleY(0); transform-origin: top; }
+      50% { transform: scaleY(1); transform-origin: top; }
+    }
+
+    /* ── BUTTONS ── */
+    .button {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.9rem 2rem;
+      transition: all 0.25s;
+      cursor: pointer;
+    }
+
+    .button.primary {
+      background: var(--rose-light);
+      color: var(--black);
+      border: 1px solid var(--rose-light);
+    }
+
+    .button.primary:hover {
+      background: var(--rose);
+      border-color: var(--rose);
+    }
+
+    .button.ghost {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--linen);
+    }
+
+    .button.ghost:hover {
+      border-color: var(--ink);
+    }
+
+    .button.outline-light {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+
+    .button.outline-light:hover {
+      border-color: var(--white);
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      padding: 7rem 4rem;
+    }
+
+    .section-heading {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 4rem;
+    }
+
+    /* ── TREATMENTS ── */
+    .treatments {
+      background: var(--panel);
+    }
+
+    .treatment-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border: 1px solid var(--cream-dark);
+    }
+
+    .treatment-card {
+      padding: 3rem 2.5rem;
+      border-right: 1px solid var(--cream-dark);
+      position: relative;
+      transition: background 0.3s;
+    }
+
+    .treatment-card:last-child { border-right: none; }
+
+    .treatment-card:hover { background: #17120F; }
+
+    .treatment-number {
+      font-family: var(--serif);
+      font-size: 4rem;
+      font-weight: 300;
+      color: var(--cream-dark);
+      line-height: 1;
+      margin-bottom: 2rem;
+      transition: color 0.3s;
+    }
+
+    .treatment-card:hover .treatment-number { color: var(--rose-pale); }
+
+    .treatment-tag {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 0.75rem;
+    }
+
+    .treatment-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .treatment-card p {
+      font-size: 0.9rem;
+    }
+
+    .treatment-card .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink);
+      border-bottom: 1px solid var(--linen);
+      padding-bottom: 0.25rem;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .treatment-card .card-link:hover {
+      color: var(--rose);
+      border-color: var(--rose);
+    }
+
+    .card-link-arrow {
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+
+    .treatment-card:hover .card-link-arrow { transform: translateX(4px); }
+
+    /* ── FEATURE ── */
+    .feature {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 80vh;
+      gap: 0;
+      background: var(--black);
+    }
+
+    .feature-media {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.6) brightness(0.9);
+    }
+
+    .feature-media::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, transparent 60%, var(--black) 100%);
+    }
+
+    .feature-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6rem 5rem 6rem 4rem;
+    }
+
+    .feature-copy .eyebrow { margin-bottom: 1.5rem; color: var(--rose-light); }
+
+    .feature-copy h2 {
+      color: var(--white);
+      margin-bottom: 2.5rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    .feature-copy p {
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 1.25rem;
+      font-size: 0.95rem;
+    }
+
+    /* ── PROCESS ── */
+    .process { background: var(--cream); }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+
+    .process-step {
+      padding: 3rem 2.5rem 3rem 0;
+      border-right: 1px solid var(--linen);
+      padding-left: 2.5rem;
+    }
+
+    .process-step:first-child { padding-left: 0; }
+    .process-step:last-child { border-right: none; }
+
+    .step-num {
+      font-family: var(--serif);
+      font-size: 5rem;
+      font-weight: 300;
+      color: var(--cream-dark);
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .process-step h3 { margin-bottom: 0.75rem; }
+
+    /* ── INDICATIONS ── */
+    .indications { background: var(--panel); }
+
+    .indication-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border: 1px solid var(--cream-dark);
+    }
+
+    .indication-card {
+      padding: 2.5rem;
+      border-right: 1px solid var(--cream-dark);
+    }
+
+    .indication-card:last-child { border-right: none; }
+
+    .indication-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+
+    .indication-card ul {
+      list-style: none;
+    }
+
+    .indication-card li {
+      font-size: 0.875rem;
+      color: var(--ink-muted);
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--cream-dark);
+      line-height: 1.5;
+      font-weight: 300;
+    }
+
+    .indication-card li:last-child { border-bottom: none; }
+
+    .indication-card li::before {
+      content: '—';
+      color: var(--rose-light);
+      margin-right: 0.5rem;
+      font-size: 0.75rem;
+    }
+
+    /* ── INTIMATE CARE ── */
+    .intimate-care {
+      background: var(--cream);
+    }
+
+    .intimate-intro {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 4rem;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+
+    .intimate-intro h2 {
+      max-width: 12ch;
+    }
+
+    .intimate-lead {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 62ch;
+    }
+
+    .intimate-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+      border: 1px solid var(--cream-dark);
+      border-bottom: none;
+      margin-top: 4rem;
+    }
+
+    .intimate-card {
+      padding: 2.5rem;
+      border-right: 1px solid var(--cream-dark);
+      border-bottom: 1px solid var(--cream-dark);
+      background: rgba(255,255,255,0.015);
+    }
+
+    .intimate-card:nth-child(2n) {
+      border-right: none;
+    }
+
+    .intimate-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: var(--ink);
+    }
+
+    .intimate-card p {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .intimate-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── RESULTS BAND ── */
+    .results-band {
+      background: var(--black);
+      padding: 5rem 4rem;
+    }
+
+    .results-band .eyebrow { color: var(--rose-light); margin-bottom: 0.75rem; }
+
+    .results-band h2 {
+      color: var(--white);
+      max-width: 30ch;
+      margin-bottom: 3.5rem;
+    }
+
+    .result-items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .result-item {
+      padding: 2rem 0;
+      border-right: 1px solid rgba(255,255,255,0.1);
+      padding-right: 2rem;
+    }
+
+    .result-item:last-child { border-right: none; }
+    .result-item:not(:first-child) { padding-left: 2rem; }
+
+    .result-item .result-mark {
+      display: block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--rose-light);
+      margin-bottom: 1rem;
+    }
+
+    .result-item span {
+      display: block;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+      font-weight: 300;
+    }
+
+    /* ── DOCTOR ── */
+    .doctor {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 80vh;
+      gap: 0;
+      background: var(--cream);
+    }
+
+    .doctor-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 7rem 5rem 7rem 4rem;
+    }
+
+    .doctor-copy .eyebrow { margin-bottom: 1.5rem; }
+
+    .doctor-copy h2 { margin-bottom: 2.5rem; }
+
+    .doctor-copy p { margin-bottom: 1.25rem; font-size: 0.95rem; }
+
+    .doctor-photo {
+      position: relative;
+      overflow: hidden;
+      background: var(--cream-dark);
+    }
+
+    .doctor-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      filter: saturate(0.8);
+    }
+
+    .doctor-caption {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 2.5rem;
+      background: rgba(5, 4, 3, 0.86);
+      border: 1px solid rgba(200,148,79,0.35);
+      backdrop-filter: blur(12px);
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .doctor-caption strong {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+
+    .doctor-caption span {
+      font-size: 0.8rem;
+      color: var(--rose);
+      letter-spacing: 0.08em;
+      font-weight: 400;
+    }
+
+    /* ── QUOTE BAND ── */
+    .quote-band {
+      padding: 6rem 4rem;
+      background: #130C09;
+      text-align: center;
+    }
+
+    .quote-band blockquote {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--ink);
+      max-width: 55ch;
+      margin: 0 auto 1.5rem;
+      line-height: 1.5;
+    }
+
+    .quote-band cite {
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--rose);
+      font-style: normal;
+    }
+
+    /* ── CONTACT ── */
+    .contact {
+      background: var(--black);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 50vh;
+    }
+
+    .contact-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 7rem 5rem 7rem 4rem;
+    }
+
+    .contact-copy .eyebrow { color: var(--rose-light); margin-bottom: 1.5rem; }
+
+    .contact-copy h2 {
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-copy p {
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 3rem;
+      max-width: 40ch;
+    }
+
+    .contact-aside {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 7rem 4rem;
+      border-left: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .contact-detail {
+      padding: 2rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .contact-detail:first-child { border-top: 1px solid rgba(255,255,255,0.08); }
+
+    .contact-detail .detail-label {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--rose-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-detail .detail-value {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: var(--white);
+    }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      background: #030302;
+      padding: 3rem 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .footer-brand strong {
+      font-family: var(--serif);
+      font-weight: 400;
+      color: var(--white);
+      font-size: 1rem;
+    }
+
+    .footer-brand span {
+      font-size: 0.75rem;
+      color: var(--rose-light);
+      letter-spacing: 0.08em;
+    }
+
+    .footer-services {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.25rem;
+    }
+
+    .footer-services span {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── REVEAL ANIMATIONS ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 900px) {
+      .site-header { padding: 1.25rem 1.5rem; }
+      .main-nav { display: none; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 8rem 1.5rem 3rem; min-height: auto; }
+      .hero-right { min-height: 72svh; order: -1; }
+      .hero-right::after {
+        background: linear-gradient(to bottom, rgba(7,6,5,0.12) 0%, var(--cream) 100%);
+      }
+      .hero-scroll { display: none; }
+      .section { padding: 5rem 1.5rem; }
+      .treatment-grid { grid-template-columns: 1fr; }
+      .treatment-card { border-right: none; border-bottom: 1px solid var(--cream-dark); }
+      .treatment-card:last-child { border-bottom: none; }
+      .feature { grid-template-columns: 1fr; }
+      .feature-media { height: 50vw; }
+      .feature-copy { padding: 4rem 1.5rem; }
+      .process-grid { grid-template-columns: 1fr; }
+      .process-step { border-right: none; border-bottom: 1px solid var(--linen); padding: 2rem 0; }
+      .indication-grid { grid-template-columns: 1fr 1fr; }
+      .indication-card { border-right: none; border-bottom: 1px solid var(--cream-dark); }
+      .intimate-intro { grid-template-columns: 1fr; gap: 2rem; }
+      .intimate-grid { grid-template-columns: 1fr; }
+      .intimate-card { border-right: none; }
+      .result-items { grid-template-columns: 1fr 1fr; }
+      .result-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .doctor { grid-template-columns: 1fr; }
+      .doctor-photo { height: 60vw; }
+      .doctor-copy { padding: 4rem 1.5rem; }
+      .contact { grid-template-columns: 1fr; }
+      .contact-copy { padding: 4rem 1.5rem; }
+      .contact-aside { padding: 2rem 1.5rem 4rem; border-left: none; border-top: 1px solid rgba(255,255,255,0.1); }
+      .results-band { padding: 4rem 1.5rem; }
+      .site-footer { flex-direction: column; gap: 1.5rem; align-items: flex-start; padding: 2rem 1.5rem; }
+      .footer-services { align-items: flex-start; }
+    }
+
+    @media (max-width: 560px) {
+      .brand-text { max-width: 11rem; line-height: 1.1; }
+      .nav-cta { padding: 0.7rem 0.9rem; font-size: 10px; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .button { text-align: center; }
+      .indication-grid,
+      .result-items { grid-template-columns: 1fr; }
+      .feature-media { height: 70vw; }
+      .doctor-photo { height: 95vw; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" id="site-header" aria-label="Cabeçalho">
+    <a class="brand" href="#inicio" aria-label="Dra. Priscila Zocal Buss">
+      <div class="brand-logo">
+        <img src="assets/dra-priscila-zocal-buss.jpeg" alt="" onerror="this.style.display='none'" />
+      </div>
+      <span class="brand-text">Dra. Priscila Zocal Buss</span>
+    </a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#tratamentos">Tratamentos</a>
+      <a href="#lipoenxertia">Lipoenxertia</a>
+      <a href="#saude-intima">Saúde íntima</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="nav-cta" href="https://api.whatsapp.com/send?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Priscila." target="_blank" rel="noreferrer">
+      Agendar consulta
+    </a>
+  </header>
+
+  <main id="inicio">
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Apresentação">
+      <div class="hero-left">
+        <p class="eyebrow hero-eyebrow">Medicina regenerativa e estética médica avançada</p>
+        <h1 class="hero-title">Dra. Priscila<br /><em>Zocal Buss</em></h1>
+        <p class="hero-copy">
+          Tratamentos que integram ciência, anatomia e biologia do envelhecimento para resultados naturais, duradouros e individualizados.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#lipoenxertia">Lipoenxertia facial</a>
+          <a class="button ghost" href="#contato">Agendar avaliação</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="assets/dra-priscila-zocal-buss.jpeg" alt="Dra. Priscila Zocal Buss" onerror="this.style.display='none'" />
+      </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Explorar</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- TRATAMENTOS -->
+    <section class="section treatments" id="tratamentos">
+      <div class="section-heading">
+        <p class="eyebrow reveal">Tratamentos</p>
+        <h2 class="reveal reveal-delay-1">Abordagem regenerativa com precisão médica</h2>
+      </div>
+      <div class="treatment-grid">
+        <article class="treatment-card reveal">
+          <div class="treatment-number">01</div>
+          <p class="treatment-tag">Gordura autóloga</p>
+          <h3>Lipoenxertia facial</h3>
+          <p>Volumização estrutural, redefinição de contornos e melhora da qualidade da pele com tecido do próprio paciente.</p>
+          <a class="card-link" href="#lipoenxertia">Saiba mais <span class="card-link-arrow">→</span></a>
+        </article>
+        <article class="treatment-card reveal reveal-delay-1">
+          <div class="treatment-number">02</div>
+          <p class="treatment-tag">Regeneração tecidual</p>
+          <h3>Nanofat</h3>
+          <p>Aplicação superficial do tecido adiposo refinado para estímulo de colágeno e reorganização da pele.</p>
+          <a class="card-link" href="#lipoenxertia">Saiba mais <span class="card-link-arrow">→</span></a>
+        </article>
+        <article class="treatment-card reveal reveal-delay-2">
+          <div class="treatment-number">03</div>
+          <p class="treatment-tag">Saúde da mulher</p>
+          <h3>Cirurgia íntima e tecnologias</h3>
+          <p>Cuidado funcional e estético com técnicas cirúrgicas e regenerativas para a saúde íntima feminina.</p>
+          <a class="card-link" href="#saude-intima">Conhecer procedimentos <span class="card-link-arrow">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- FEATURE — LIPOENXERTIA -->
+    <section class="feature" id="lipoenxertia" aria-label="Lipoenxertia facial em destaque">
+      <div class="feature-media">
+        <img src="assets/consultorio-priscila-zocal-buss.png" alt="Consultório da Dra. Priscila Zocal Buss" onerror="this.parentElement.style.background='#2A2220'" />
+      </div>
+      <div class="feature-copy">
+        <p class="eyebrow reveal">Procedimento em destaque</p>
+        <h2 class="reveal reveal-delay-1">Enxerto de gordura facial</h2>
+        <p class="reveal reveal-delay-2">
+          O enxerto de gordura autóloga é uma técnica avançada de volumização facial que utiliza o próprio tecido adiposo do paciente para restaurar volume, redefinir contornos e melhorar a qualidade da pele.
+        </p>
+        <p class="reveal reveal-delay-3">
+          Diferente dos preenchedores sintéticos, a gordura é um tecido vivo, com capacidade de integração ao tecido receptor — promovendo resultados mais naturais, estáveis e biologicamente ativos.
+        </p>
+        <p class="reveal reveal-delay-4">
+          O tecido adiposo é rico em células-tronco mesenquimais e fatores de crescimento, contribuindo para neocolagênese, melhora da textura e aumento da vascularização local.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROCESSO -->
+    <section class="section process">
+      <div class="section-heading">
+        <p class="eyebrow reveal">Técnica</p>
+        <h2 class="reveal reveal-delay-1">Três etapas fundamentais</h2>
+      </div>
+      <div class="process-grid">
+        <article class="process-step reveal">
+          <div class="step-num">01</div>
+          <h3>Coleta</h3>
+          <p>Gordura coletada com baixa pressão negativa, preservando a integridade e viabilidade do tecido adiposo.</p>
+        </article>
+        <article class="process-step reveal reveal-delay-1">
+          <div class="step-num">02</div>
+          <h3>Processamento</h3>
+          <p>Preparo com remoção de impurezas e seleção da fração adequada ao objetivo terapêutico — microfat ou nanofat.</p>
+        </article>
+        <article class="process-step reveal reveal-delay-2">
+          <div class="step-num">03</div>
+          <h3>Enxertia</h3>
+          <p>Aplicação em planos anatômicos específicos, respeitando a anatomia facial e o padrão individual de envelhecimento.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- INDICAÇÕES -->
+    <section class="section indications" id="indicacoes" aria-label="Indicações por região facial">
+      <div class="section-heading">
+        <p class="eyebrow reveal">Indicações por região</p>
+        <h2 class="reveal reveal-delay-1">Planejamento por terços faciais</h2>
+      </div>
+      <div class="indication-grid">
+        <article class="indication-card reveal">
+          <h3>Terço superior</h3>
+          <ul>
+            <li>Região temporal para correção de depressões</li>
+            <li>Fronte para suporte e melhora de irregularidades</li>
+            <li>Região periorbitária superior em casos selecionados</li>
+          </ul>
+        </article>
+        <article class="indication-card reveal reveal-delay-1">
+          <h3>Terço médio</h3>
+          <ul>
+            <li>Olheiras e transição pálpebra-bochecha</li>
+            <li>Região malar e submalar para projeção e suporte</li>
+            <li>Sulcos nasojugal e nasolabial por reposição estrutural</li>
+          </ul>
+        </article>
+        <article class="indication-card reveal reveal-delay-2">
+          <h3>Terço inferior</h3>
+          <ul>
+            <li>Linha da mandíbula e contorno mandibular</li>
+            <li>Região de pré-jowl e perda de sustentação</li>
+            <li>Queixo e sulco mentolabial</li>
+          </ul>
+        </article>
+        <article class="indication-card reveal reveal-delay-3">
+          <h3>Região perioral</h3>
+          <ul>
+            <li>Lábios com volumização e definição de contorno</li>
+            <li>Código de barras com melhora de rugas finas</li>
+            <li>Efeito regenerativo associado ao tecido adiposo</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- SAÚDE ÍNTIMA -->
+    <section class="section intimate-care" id="saude-intima" aria-label="Saúde íntima feminina">
+      <div class="intimate-intro">
+        <div>
+          <p class="eyebrow reveal">Saúde íntima feminina</p>
+          <h2 class="reveal reveal-delay-1">Cirurgia íntima e tecnologias regenerativas</h2>
+        </div>
+        <div class="intimate-lead reveal reveal-delay-2">
+          <p>
+            Procedimentos íntimos planejados de forma individualizada para promover conforto, harmonia estética, bem-estar funcional e melhora da autoestima feminina.
+          </p>
+          <p>
+            A abordagem respeita a anatomia, a naturalidade e as necessidades de cada paciente, integrando técnicas cirúrgicas delicadas, tecnologias de consultório e protocolos regenerativos.
+          </p>
+        </div>
+      </div>
+
+      <div class="intimate-grid">
+        <article class="intimate-card reveal">
+          <h3>Labioplastia + redução do capuz clitoriano</h3>
+          <p>
+            Procedimento cirúrgico íntimo realizado para remodelar os pequenos lábios e reduzir o excesso de pele da região do capuz clitoriano, promovendo mais conforto, harmonia estética e bem-estar funcional.
+          </p>
+          <p>
+            Muitas pacientes procuram o procedimento por desconforto ao usar roupas justas, durante atividades físicas, relações íntimas ou por questões relacionadas à autoestima e feminilidade. A técnica é realizada de forma delicada, respeitando a anatomia e a naturalidade da região íntima feminina.
+          </p>
+        </article>
+
+        <article class="intimate-card reveal reveal-delay-1">
+          <h3>Labioplastia</h3>
+          <p>
+            Cirurgia íntima feminina indicada para reduzir ou remodelar os pequenos lábios vaginais quando há excesso de pele, assimetrias ou desconfortos funcionais e estéticos.
+          </p>
+          <p>
+            Além da melhora estética, muitas pacientes relatam melhora importante na confiança, conforto no dia a dia e qualidade de vida.
+          </p>
+        </article>
+
+        <article class="intimate-card reveal reveal-delay-2">
+          <h3>Clitoropexia</h3>
+          <p>
+            Procedimento realizado para reposicionar delicadamente a região do capuz clitoriano quando existe excesso de tecido ou queda local, proporcionando maior harmonia estética da região íntima.
+          </p>
+          <p>
+            A técnica busca preservar a naturalidade, sensibilidade e anatomia feminina, sempre respeitando a individualidade de cada paciente.
+          </p>
+        </article>
+
+        <article class="intimate-card reveal reveal-delay-3">
+          <h3>Laser íntimo de CO2</h3>
+          <p>
+            Tecnologia utilizada para estimular colágeno e regeneração tecidual da região íntima feminina. Pode auxiliar na melhora da flacidez, ressecamento, textura da pele, desconforto íntimo e qualidade da mucosa vaginal.
+          </p>
+          <p>
+            É um procedimento minimamente invasivo, realizado em consultório, com recuperação rápida e retorno precoce às atividades habituais.
+          </p>
+        </article>
+
+        <article class="intimate-card reveal">
+          <h3>Clareamento íntimo</h3>
+          <p>
+            Procedimento realizado para melhorar o aspecto da pigmentação da região íntima feminina, promovendo tonalidade mais uniforme e rejuvenescida da pele.
+          </p>
+          <p>
+            O tratamento pode envolver tecnologias associadas e protocolos individualizados conforme o tipo de pele e a necessidade de cada paciente.
+          </p>
+        </article>
+
+        <article class="intimate-card reveal reveal-delay-1">
+          <h3>Retirada de plicoma</h3>
+          <p>
+            Procedimento indicado para remoção de excesso de pele na região anal, conhecido como plicoma anal.
+          </p>
+          <p>
+            Pode ser realizado tanto por desconforto estético quanto funcional, especialmente em casos de dificuldade de higiene, irritação local ou incômodo no dia a dia. A abordagem é delicada e planejada para proporcionar conforto e recuperação adequada.
+          </p>
+        </article>
+
+        <article class="intimate-card reveal reveal-delay-2">
+          <h3>Preenchimento íntimo — ponto G</h3>
+          <p>
+            Procedimento realizado com ácido hialurônico biocompatível com o objetivo de aumentar a hidratação, suporte e sensibilidade da região correspondente ao chamado “ponto G”.
+          </p>
+          <p>
+            É um tratamento minimamente invasivo, realizado em consultório, voltado para melhora da percepção íntima e bem-estar feminino.
+          </p>
+        </article>
+
+        <article class="intimate-card reveal reveal-delay-3">
+          <h3>Preenchimento íntimo — ponto H</h3>
+          <p>
+            Técnica íntima regenerativa e funcional realizada para melhorar hidratação, sustentação tecidual e conforto da região íntima feminina.
+          </p>
+          <p>
+            O procedimento busca promover melhora da qualidade tecidual, autoestima e bem-estar, sempre de maneira natural e individualizada.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESULTS BAND -->
+    <section class="results-band">
+      <div>
+        <p class="eyebrow reveal">Resultados e diferenciais</p>
+        <h2 class="reveal reveal-delay-1">Estrutura, pele e biologia<br />tratadas em conjunto</h2>
+      </div>
+      <div class="result-items">
+        <div class="result-item reveal">
+          <span class="result-mark"></span>
+          <span>Volumização natural e harmônica</span>
+        </div>
+        <div class="result-item reveal reveal-delay-1">
+          <span class="result-mark"></span>
+          <span>Melhora da qualidade e textura da pele</span>
+        </div>
+        <div class="result-item reveal reveal-delay-2">
+          <span class="result-mark"></span>
+          <span>Efeito regenerativo celular associado</span>
+        </div>
+        <div class="result-item reveal reveal-delay-3">
+          <span class="result-mark"></span>
+          <span>Menor risco de reação inflamatória crônica</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="quote-band">
+      <blockquote>
+        "Cada rosto tem uma anatomia própria e um tempo biológico singular. O tratamento começa pelo entendimento dessas duas dimensões."
+      </blockquote>
+      <cite>Dra. Priscila Zocal Buss — CRM 287353</cite>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="doctor" id="sobre">
+      <div class="doctor-copy">
+        <p class="eyebrow reveal">Sobre a médica</p>
+        <h2 class="reveal reveal-delay-1">Olhar técnico, integrado e individualizado</h2>
+        <p class="reveal reveal-delay-2">
+          Com atuação focada em medicina regenerativa e cosmiatria, a Dra. Priscila Zocal Buss desenvolve tratamentos que associam volumização e regeneração tecidual de forma integrada, respeitando a anatomia e a biologia do envelhecimento.
+        </p>
+        <p class="reveal reveal-delay-2">
+          Seu trabalho tem como base o uso da gordura autóloga como ferramenta terapêutica. O microfat é utilizado para reposição volumétrica estrutural; o nanofat, obtido por refinamento do tecido adiposo, é aplicado superficialmente com objetivo regenerativo.
+        </p>
+        <p class="reveal reveal-delay-3">
+          Além da estética facial, a Dra. Priscila atua na saúde da mulher, integrando labioplastia, clitoropexia, laser íntimo, clareamento, preenchimentos íntimos e outras técnicas regenerativas para o cuidado funcional e estético.
+        </p>
+      </div>
+      <div class="doctor-photo">
+        <img src="assets/dra-priscila-zocal-buss.jpeg" alt="Dra. Priscila Zocal Buss" onerror="this.style.display='none'" />
+        <div class="doctor-caption">
+          <strong>Dra. Priscila Zocal Buss</strong>
+          <span>CRM 287353</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contact" id="contato" aria-label="Contato">
+      <div class="contact-copy">
+        <p class="eyebrow reveal">Contato</p>
+        <h2 class="reveal reveal-delay-1">Agende uma avaliação médica</h2>
+        <p class="reveal reveal-delay-2">
+          A consulta individualizada define a melhor estratégia para cada caso — estrutura facial, qualidade da pele, histórico e objetivos do tratamento.
+        </p>
+        <a class="button outline-light reveal reveal-delay-3" href="https://api.whatsapp.com/send?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Priscila." target="_blank" rel="noreferrer">
+          Chamar no WhatsApp
+        </a>
+      </div>
+      <div class="contact-aside">
+        <div class="contact-detail reveal">
+          <p class="detail-label">Especialidade</p>
+          <p class="detail-value">Medicina Regenerativa</p>
+        </div>
+        <div class="contact-detail reveal reveal-delay-1">
+          <p class="detail-label">Procedimentos</p>
+          <p class="detail-value">Estética Médica e Cirurgia Íntima</p>
+        </div>
+        <div class="contact-detail reveal reveal-delay-2">
+          <p class="detail-label">Área de atuação</p>
+          <p class="detail-value">Saúde Íntima Feminina</p>
+        </div>
+        <div class="contact-detail reveal reveal-delay-3">
+          <p class="detail-label">Registro</p>
+          <p class="detail-value">CRM 287353</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <strong>Dra. Priscila Zocal Buss</strong>
+      <span>CRM 287353</span>
+    </div>
+    <div class="footer-services">
+      <span>Medicina Regenerativa</span>
+      <span>Estética Médica Avançada</span>
+      <span>Labioplastia, Laser Íntimo e Saúde da Mulher</span>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
