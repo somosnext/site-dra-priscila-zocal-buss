@@ -304,7 +304,7 @@
 
     .treatment-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 0;
       border: 1px solid var(--cream-dark);
     }
@@ -348,6 +348,30 @@
 
     .treatment-card p {
       font-size: 0.9rem;
+    }
+
+    .treatment-card ul {
+      list-style: none;
+      margin-top: 1.25rem;
+    }
+
+    .treatment-card li {
+      color: var(--ink-muted);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+
+    .treatment-card li:last-child {
+      border-bottom: none;
+    }
+
+    .treatment-card li::before {
+      content: '—';
+      color: var(--rose-light);
+      margin-right: 0.5rem;
+      font-size: 0.75rem;
     }
 
     .treatment-card .card-link {
@@ -851,6 +875,14 @@
       .footer-services { align-items: flex-start; }
     }
 
+    @media (max-width: 1180px) and (min-width: 901px) {
+      .site-header { padding: 1.25rem 2rem; }
+      .main-nav { gap: 1.4rem; }
+      .treatment-grid { grid-template-columns: repeat(2, 1fr); }
+      .treatment-card:nth-child(2n) { border-right: none; }
+      .treatment-card:nth-child(-n+2) { border-bottom: 1px solid var(--cream-dark); }
+    }
+
     @media (max-width: 560px) {
       .brand-text { max-width: 11rem; line-height: 1.1; }
       .nav-cta { padding: 0.7rem 0.9rem; font-size: 10px; }
@@ -873,13 +905,13 @@
       <span class="brand-text">Dra. Priscila Zocal Buss</span>
     </a>
     <nav class="main-nav" aria-label="Navegação principal">
-      <a href="#tratamentos">Tratamentos</a>
+      <a href="#tratamentos">Serviços</a>
       <a href="#lipoenxertia">Lipoenxertia</a>
       <a href="#saude-intima">Saúde íntima</a>
       <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
     </nav>
-    <a class="nav-cta" href="https://api.whatsapp.com/send?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Priscila." target="_blank" rel="noreferrer">
+    <a class="nav-cta" href="https://api.whatsapp.com/send/?phone=5566999218100&text&type=phone_number&app_absent=0" target="_blank" rel="noreferrer">
       Agendar consulta
     </a>
   </header>
@@ -895,8 +927,8 @@
           Tratamentos que integram ciência, anatomia e biologia do envelhecimento para resultados naturais, duradouros e individualizados.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="#lipoenxertia">Lipoenxertia facial</a>
-          <a class="button ghost" href="#contato">Agendar avaliação</a>
+          <a class="button primary" href="#tratamentos">Ver serviços</a>
+          <a class="button ghost" href="https://api.whatsapp.com/send/?phone=5566999218100&text&type=phone_number&app_absent=0" target="_blank" rel="noreferrer">Agendar avaliação</a>
         </div>
       </div>
       <div class="hero-right">
@@ -911,30 +943,58 @@
     <!-- TRATAMENTOS -->
     <section class="section treatments" id="tratamentos">
       <div class="section-heading">
-        <p class="eyebrow reveal">Tratamentos</p>
-        <h2 class="reveal reveal-delay-1">Abordagem regenerativa com precisão médica</h2>
+        <p class="eyebrow reveal">Serviços</p>
+        <h2 class="reveal reveal-delay-1">Principais áreas de atuação</h2>
       </div>
       <div class="treatment-grid">
         <article class="treatment-card reveal">
           <div class="treatment-number">01</div>
-          <p class="treatment-tag">Gordura autóloga</p>
-          <h3>Lipoenxertia facial</h3>
-          <p>Volumização estrutural, redefinição de contornos e melhora da qualidade da pele com tecido do próprio paciente.</p>
-          <a class="card-link" href="#lipoenxertia">Saiba mais <span class="card-link-arrow">→</span></a>
+          <p class="treatment-tag">Saúde da mulher</p>
+          <h3>Cirurgia íntima</h3>
+          <p>Procedimentos íntimos com planejamento delicado, funcional e estético.</p>
+          <ul>
+            <li>Peeling clareador</li>
+            <li>Bioestimulador íntimo</li>
+            <li>Preenchimento íntimo</li>
+          </ul>
+          <a class="card-link" href="#saude-intima">Conhecer procedimentos <span class="card-link-arrow">→</span></a>
         </article>
         <article class="treatment-card reveal reveal-delay-1">
           <div class="treatment-number">02</div>
-          <p class="treatment-tag">Regeneração tecidual</p>
-          <h3>Nanofat</h3>
-          <p>Aplicação superficial do tecido adiposo refinado para estímulo de colágeno e reorganização da pele.</p>
-          <a class="card-link" href="#lipoenxertia">Saiba mais <span class="card-link-arrow">→</span></a>
+          <p class="treatment-tag">Face</p>
+          <h3>Cirurgias faciais</h3>
+          <p>Técnicas cirúrgicas para rejuvenescimento, definição e harmonização facial.</p>
+          <ul>
+            <li>Blefaroplastia</li>
+            <li>Lip lifting</li>
+            <li>Brow lifting</li>
+          </ul>
+          <a class="card-link" href="#contato">Agendar avaliação <span class="card-link-arrow">→</span></a>
         </article>
         <article class="treatment-card reveal reveal-delay-2">
           <div class="treatment-number">03</div>
-          <p class="treatment-tag">Saúde da mulher</p>
-          <h3>Cirurgia íntima e tecnologias</h3>
-          <p>Cuidado funcional e estético com técnicas cirúrgicas e regenerativas para a saúde íntima feminina.</p>
-          <a class="card-link" href="#saude-intima">Conhecer procedimentos <span class="card-link-arrow">→</span></a>
+          <p class="treatment-tag">Gordura autóloga</p>
+          <h3>Enxerto de gordura facial</h3>
+          <p>Volumização estrutural, redefinição de contornos e melhora da qualidade da pele com tecido do próprio paciente.</p>
+          <ul>
+            <li>Lipoenxertia facial</li>
+            <li>Microfat</li>
+            <li>Nanofat</li>
+          </ul>
+          <a class="card-link" href="#lipoenxertia">Saiba mais <span class="card-link-arrow">→</span></a>
+        </article>
+        <article class="treatment-card reveal reveal-delay-3">
+          <div class="treatment-number">04</div>
+          <p class="treatment-tag">Tecnologias</p>
+          <h3>Laser, pele e injetáveis</h3>
+          <p>Protocolos associados para textura, firmeza, estímulo de colágeno e rejuvenescimento.</p>
+          <ul>
+            <li>Laser CO2</li>
+            <li>Renuvion</li>
+            <li>Peelings</li>
+            <li>Botox</li>
+          </ul>
+          <a class="card-link" href="#contato">Agendar avaliação <span class="card-link-arrow">→</span></a>
         </article>
       </div>
     </section>
@@ -1192,7 +1252,7 @@
         <p class="reveal reveal-delay-2">
           A consulta individualizada define a melhor estratégia para cada caso — estrutura facial, qualidade da pele, histórico e objetivos do tratamento.
         </p>
-        <a class="button outline-light reveal reveal-delay-3" href="https://api.whatsapp.com/send?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Priscila." target="_blank" rel="noreferrer">
+        <a class="button outline-light reveal reveal-delay-3" href="https://api.whatsapp.com/send/?phone=5566999218100&text&type=phone_number&app_absent=0" target="_blank" rel="noreferrer">
           Chamar no WhatsApp
         </a>
       </div>
