@@ -314,13 +314,13 @@
 
     .treatment-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 0;
       border: 1px solid var(--cream-dark);
     }
 
     .treatment-card {
-      padding: 3rem 2.5rem;
+      padding: 3rem 2rem;
       border-right: 1px solid var(--cream-dark);
       position: relative;
       transition: background 0.3s;
@@ -943,8 +943,9 @@
       .site-header { padding: 1.25rem 2rem; }
       .main-nav { gap: 1.4rem; }
       .treatment-grid { grid-template-columns: repeat(2, 1fr); }
+      .treatment-card { border-bottom: 1px solid var(--cream-dark); }
       .treatment-card:nth-child(2n) { border-right: none; }
-      .treatment-card:nth-child(-n+2) { border-bottom: 1px solid var(--cream-dark); }
+      .treatment-card:last-child { border-bottom: none; }
     }
 
     @media (max-width: 560px) {
@@ -1060,6 +1061,19 @@
             <li>Botox</li>
           </ul>
           <a class="card-link" href="#contato">Agendar avaliação <span class="card-link-arrow">→</span></a>
+        </article>
+        <article class="treatment-card reveal reveal-delay-4">
+          <div class="treatment-number">05</div>
+          <p class="treatment-tag">Couro cabeludo</p>
+          <h3>Tricologia regenerativa</h3>
+          <p>Protocolos médicos para saúde do couro cabeludo, estímulo folicular e melhora da qualidade dos fios.</p>
+          <ul>
+            <li>PRP</li>
+            <li>Microagulhamento</li>
+            <li>Drug delivery</li>
+            <li>Gordura autóloga</li>
+          </ul>
+          <a class="card-link" href="#tricologia">Saiba mais <span class="card-link-arrow">→</span></a>
         </article>
       </div>
     </section>
