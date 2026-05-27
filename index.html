@@ -189,17 +189,27 @@
       font-weight: 300;
       line-height: 1.05;
       letter-spacing: 0;
-      margin-bottom: 2rem;
+      margin-bottom: 0.75rem;
+      color: var(--rose);
     }
 
     .hero-title em {
       font-style: normal;
-      color: var(--rose);
+      color: inherit;
+    }
+
+    .hero-crm {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--rose-light);
+      margin-bottom: 2rem;
     }
 
     .hero-copy {
       font-size: 1rem;
-      max-width: 36ch;
+      max-width: 58ch;
       margin-bottom: 3rem;
       line-height: 1.8;
     }
@@ -692,6 +702,58 @@
       font-weight: 400;
     }
 
+    /* ── TRICHOLOGY ── */
+    .trichology {
+      background: var(--panel);
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 4rem;
+    }
+
+    .trichology-copy {
+      max-width: 68ch;
+    }
+
+    .trichology-copy p {
+      margin-bottom: 1.25rem;
+      font-size: 0.95rem;
+    }
+
+    .trichology-list {
+      border: 1px solid var(--cream-dark);
+      align-self: start;
+      grid-column: 2;
+    }
+
+    .trichology-list h3 {
+      padding: 2rem 2rem 1.5rem;
+      border-bottom: 1px solid var(--cream-dark);
+      font-size: 1.25rem;
+    }
+
+    .trichology-list ul {
+      list-style: none;
+    }
+
+    .trichology-list li {
+      color: var(--ink-muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+
+    .trichology-list li:last-child {
+      border-bottom: none;
+    }
+
+    .trichology-list li::before {
+      content: '—';
+      color: var(--rose-light);
+      margin-right: 0.5rem;
+      font-size: 0.75rem;
+    }
+
     /* ── QUOTE BAND ── */
     .quote-band {
       padding: 6rem 4rem;
@@ -867,6 +929,8 @@
       .doctor { grid-template-columns: 1fr; }
       .doctor-photo { height: 60vw; }
       .doctor-copy { padding: 4rem 1.5rem; }
+      .trichology { grid-template-columns: 1fr; gap: 2rem; }
+      .trichology-list { grid-column: auto; }
       .contact { grid-template-columns: 1fr; }
       .contact-copy { padding: 4rem 1.5rem; }
       .contact-aside { padding: 2rem 1.5rem 4rem; border-left: none; border-top: 1px solid rgba(255,255,255,0.1); }
@@ -923,8 +987,9 @@
       <div class="hero-left">
         <p class="eyebrow hero-eyebrow">Medicina regenerativa e estética médica avançada</p>
         <h1 class="hero-title">Dra. Priscila<br /><em>Zocal Buss</em></h1>
+        <p class="hero-crm">CRM SP 287353</p>
         <p class="hero-copy">
-          Tratamentos que integram ciência, anatomia e biologia do envelhecimento para resultados naturais, duradouros e individualizados.
+          Cirurgias e procedimentos íntimos a laser. Medicina regenerativa com enxerto de gordura microfat e nanofat associado ao CO2. Cirurgias e procedimentos médicos faciais e corporais com uso de tecnologias avançadas para tratamento de flacidez e remodelação corporal minimamente invasiva.
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#tratamentos">Ver serviços</a>
@@ -1244,6 +1309,38 @@
       </div>
     </section>
 
+    <!-- TRICOLOGIA -->
+    <section class="section trichology" id="tricologia" aria-label="Tricologia regenerativa">
+      <div>
+        <p class="eyebrow reveal">Tricologia regenerativa</p>
+        <h2 class="reveal reveal-delay-1">Saúde do couro cabeludo e regeneração capilar</h2>
+      </div>
+      <div class="trichology-copy reveal reveal-delay-2">
+        <p>
+          A tricologia regenerativa une tecnologias e terapias avançadas com foco na saúde do couro cabeludo, estímulo folicular e melhora da qualidade dos fios, sempre com abordagem individualizada e baseada em evidências científicas.
+        </p>
+        <p>
+          Os protocolos podem incluir terapias regenerativas como PRP (Plasma Rico em Plaquetas), microagulhamento, drug delivery e uso de gordura autóloga processada, rica em células regenerativas e fatores bioativos associados à estimulação tecidual e melhora do ambiente folicular.
+        </p>
+        <p>
+          A gordura autóloga possui células-tronco derivadas do tecido adiposo e mediadores regenerativos que podem auxiliar na qualidade do couro cabeludo, vascularização e estímulo biológico folicular, especialmente quando associada a protocolos modernos de regeneração capilar.
+        </p>
+        <p>
+          Cada paciente é avaliado de forma individual. Somente médicos podem solicitar exames para investigar o motivo da queda e prescrever tratamentos com bloqueadores em alguns casos, minoxidil ou terapias combinadas, considerando histórico clínico, exames, padrão de queda, inflamação do couro cabeludo e necessidades específicas.
+        </p>
+      </div>
+      <div class="trichology-list reveal reveal-delay-3">
+        <h3>Tratamentos realizados</h3>
+        <ul>
+          <li>Alopecia androgenética</li>
+          <li>Eflúvio telógeno</li>
+          <li>Eflúvio associado ao uso de canetas emagrecedoras</li>
+          <li>Alopecias cicatriciais</li>
+          <li>Dermatite seborreica</li>
+        </ul>
+      </div>
+    </section>
+
     <!-- CONTATO -->
     <section class="contact" id="contato" aria-label="Contato">
       <div class="contact-copy">
@@ -1287,6 +1384,7 @@
       <span>Medicina Regenerativa</span>
       <span>Estética Médica Avançada</span>
       <span>Labioplastia, Laser Íntimo e Saúde da Mulher</span>
+      <span>Tricologia Regenerativa</span>
     </div>
   </footer>
 
