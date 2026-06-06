@@ -594,6 +594,66 @@
       margin-bottom: 0;
     }
 
+    .pricing {
+      background: var(--panel);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+      border: 1px solid var(--cream-dark);
+      margin-top: 4rem;
+    }
+
+    .pricing-card {
+      padding: 2.5rem;
+      border-right: 1px solid var(--cream-dark);
+      border-bottom: 1px solid var(--cream-dark);
+    }
+
+    .pricing-card:nth-child(2n) {
+      border-right: none;
+    }
+
+    .pricing-card h3 {
+      color: var(--rose);
+      font-size: 1.05rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .pricing-card ul {
+      list-style: none;
+    }
+
+    .pricing-card li {
+      color: var(--ink-muted);
+      font-size: 0.95rem;
+      line-height: 1.55;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+
+    .pricing-card li:last-child {
+      border-bottom: none;
+    }
+
+    .pricing-card li::before {
+      content: '•';
+      color: var(--rose-light);
+      margin-right: 0.6rem;
+    }
+
+    .pricing-note {
+      color: var(--ink-muted);
+      font-size: 0.9rem;
+      font-style: italic;
+      margin-top: 1rem;
+    }
+
     /* ── RESULTS BAND ── */
     .results-band {
       background: var(--black);
@@ -924,6 +984,8 @@
       .intimate-intro { grid-template-columns: 1fr; gap: 2rem; }
       .intimate-grid { grid-template-columns: 1fr; }
       .intimate-card { border-right: none; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .pricing-card { border-right: none; }
       .result-items { grid-template-columns: 1fr 1fr; }
       .result-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
       .doctor { grid-template-columns: 1fr; }
@@ -973,6 +1035,7 @@
       <a href="#tratamentos">Serviços</a>
       <a href="#lipoenxertia">Lipoenxertia</a>
       <a href="#saude-intima">Saúde íntima</a>
+      <a href="#valores">Valores</a>
       <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
     </nav>
@@ -1265,6 +1328,64 @@
       </div>
     </section>
 
+    <!-- VALORES -->
+    <section class="section pricing" id="valores" aria-label="Valores de estética íntima feminina">
+      <div class="section-heading">
+        <p class="eyebrow reveal">Estética íntima feminina</p>
+        <h2 class="reveal reveal-delay-1">Consulta e procedimentos</h2>
+        <p class="reveal reveal-delay-2">
+          Valores de referência para avaliação e procedimentos íntimos femininos. A indicação final é definida em consulta médica individualizada.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <article class="pricing-card reveal">
+          <h3>Consulta</h3>
+          <ul>
+            <li>Consulta em Estética Íntima: R$ 600,00</li>
+          </ul>
+          <p class="pricing-note">O valor da consulta é integralmente abatido em procedimentos realizados na clínica.</p>
+        </article>
+
+        <article class="pricing-card reveal reveal-delay-1">
+          <h3>Procedimentos cirúrgicos</h3>
+          <ul>
+            <li>Labioplastia a laser: R$ 6.490,00</li>
+            <li>Redução de capuz clitoriano a laser: R$ 6.490,00</li>
+            <li>Labioplastia + redução de capuz clitoriano a laser: R$ 8.990,00</li>
+            <li>Clitoripexia: R$ 9.990,00</li>
+            <li>Correção de plicoma a laser: R$ 6.490,00</li>
+          </ul>
+        </article>
+
+        <article class="pricing-card reveal reveal-delay-2">
+          <h3>Procedimentos não cirúrgicos</h3>
+          <ul>
+            <li>Laser íntimo vaginal (CO2): R$ 1.159,00 por sessão</li>
+            <li>Clareamento íntimo: R$ 950,00 por sessão</li>
+            <li>Bioestimulação íntima: R$ 2.190,00 por sessão</li>
+          </ul>
+        </article>
+
+        <article class="pricing-card reveal reveal-delay-3">
+          <h3>Preenchimento dos grandes lábios</h3>
+          <ul>
+            <li>1 ampola: R$ 1.490,00</li>
+            <li>2 ampolas: R$ 2.790,00</li>
+            <li>3 ampolas: R$ 3.990,00</li>
+          </ul>
+        </article>
+
+        <article class="pricing-card reveal">
+          <h3>Preenchimento íntimo</h3>
+          <ul>
+            <li>Ponto G: R$ 2.390,00</li>
+            <li>Ponto H: R$ 1.490,00</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
     <!-- RESULTS BAND -->
     <section class="results-band">
       <div>
@@ -1384,6 +1505,14 @@
           <p class="detail-label">Registro</p>
           <p class="detail-value">CRM 287353</p>
         </div>
+        <div class="contact-detail reveal">
+          <p class="detail-label">Endereço</p>
+          <p class="detail-value">Avenida Rubem Berta, 860 — Medplex Ibirapuera, Sala 23, São Paulo — SP</p>
+        </div>
+        <div class="contact-detail reveal reveal-delay-1">
+          <p class="detail-label">Instagram</p>
+          <p class="detail-value">@drapriscilabuss</p>
+        </div>
       </div>
     </section>
 
@@ -1399,6 +1528,8 @@
       <span>Estética Médica Avançada</span>
       <span>Labioplastia, Laser Íntimo e Saúde da Mulher</span>
       <span>Tricologia Regenerativa</span>
+      <span>Avenida Rubem Berta, 860 — Medplex Ibirapuera, Sala 23</span>
+      <span>@drapriscilabuss</span>
     </div>
   </footer>
 
